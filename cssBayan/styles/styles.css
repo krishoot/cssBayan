@@ -1,0 +1,63 @@
+:root {
+    --color-1: #120915;
+    --color-2: #123248;
+    --color-3: #146487;
+    --color-4: #1fa0ce;
+    --color-5: #20dad8;
+    --color-6: #ffffff;
+}
+
+.page {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15vh 15vw;
+    background-color: var(--color-1);
+    font-size: 16px;
+    font-family: 'Roboto', 'Roboto Local', Arial, sans-serif;
+}
+
+.page__inner {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.page__bayan {
+    width: 50vw;
+}
+
+.bayan__header {
+    background-color: var(--color-3);
+    padding: 0.9375em 1.875em;
+    border-radius: 0.5em 0.5em 0 0;
+}
+
+.bayan__title {
+    color: var(--color-6);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.25em;
+}
+
+.bayan-section__input {
+    display: none;
+}
+
+.bayan-section-label__header {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    padding: 15px 30px;
+    background-color: var(--color-2);
+    cursor: pointer;
+}
+
+.bayan-section-label__caption {
+    flex-grow: 1;
+    font-size: 18px;
+    color: var(--color-5);
+    transition: color .5s ease-in-out;
+}
