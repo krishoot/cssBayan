@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15vh 15vw;
+    padding: 5vw;
     background-color: var(--color-1);
     font-size: 16px;
     font-family: 'Roboto', 'Roboto Local', Arial, sans-serif;
@@ -23,10 +23,12 @@
     justify-content: center;
     align-items: flex-start;
     flex-grow: 1;
+    width: 100%;
 }
 
 .page__bayan {
-    width: 50vw;
+    width: 100%;
+    max-width: calc(100% - 10px);
 }
 
 .bayan__header {
@@ -39,7 +41,7 @@
     color: var(--color-6);
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 1.25em;
+    font-size: 30px;
 }
 
 .bayan-section__input {
@@ -60,7 +62,7 @@
 
 .bayan-section-label__caption {
     flex-grow: 1;
-    font-size: 18px;
+    font-size: 20px;
     color: var(--color-5);
     transition: color .5s ease-in-out;
 }
@@ -127,30 +129,14 @@
     height: 300px;
 }
 
-.bayan-sections:hover .bayan-section-label__caption {
-    color: var(--color-6);
-}
-
-.bayan-sections:hover .bayan-section-label__icon::before,
-.bayan-sections:hover .bayan-section-label__icon::after {
-    opacity: 1;
-    background-color: var(--color-6);
-}
-
-.bayan-section:hover .bayan-section-label__content {
-    max-height: 100vh;
-}
-
 .bayan-section__input:checked + .bayan-section-label .bayan-section-label__content {
     max-height: 100vh;
 }
 
-.bayan-section:hover .bayan-section-label__icon::before,
 .bayan-section__input:checked + .bayan-section-label .bayan-section-label__icon::before {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.bayan-section:hover .bayan-section-label__icon::after,
 .bayan-section__input:checked + .bayan-section-label .bayan-section-label__icon::after {
     transform: translate(-50%, -50%) rotate(45deg);
 }
@@ -159,12 +145,10 @@
     color: var(--color-6);
 }
 
-.bayan-section:hover .bayan-section-label__picture--front {
-    transform: rotateY(0);
-}
-
-.bayan-section:hover .bayan-section-label__picture--back {
-    transform: rotateY(180deg);
+.bayan-section__input:checked + .bayan-section-label .bayan-section-label__icon::before,
+.bayan-section__input:checked + .bayan-section-label .bayan-section-label__icon::after {
+    opacity: 1;
+    background-color: var(--color-6);
 }
 
 .bayan-section__input:checked + .bayan-section-label .bayan-section-label__picture--front {
