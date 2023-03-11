@@ -46,13 +46,16 @@
     display: none;
 }
 
+.bayan-section-label {
+    cursor: pointer;
+}
+
 .bayan-section-label__header {
     display: flex;
     align-items: center;
     column-gap: 15px;
     padding: 15px 30px;
     background-color: var(--color-2);
-    cursor: pointer;
 }
 
 .bayan-section-label__caption {
@@ -142,10 +145,12 @@
     max-height: 100vh;
 }
 
+.bayan-section:hover .bayan-section-label__icon::before,
 .bayan-section__input:checked + .bayan-section-label .bayan-section-label__icon::before {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+.bayan-section:hover .bayan-section-label__icon::after,
 .bayan-section__input:checked + .bayan-section-label .bayan-section-label__icon::after {
     transform: translate(-50%, -50%) rotate(45deg);
 }
