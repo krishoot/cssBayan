@@ -91,7 +91,7 @@
 .bayan-section-label__picture {
     backface-visibility: hidden;
     transform-style: preserve-3d;
-    transition: ease-in-out .5s;
+    transition: ease-in 1s;
     position: absolute;
     background-color: var(--color-1);
 }
