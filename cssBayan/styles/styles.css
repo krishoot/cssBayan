@@ -61,3 +61,111 @@
     color: var(--color-5);
     transition: color .5s ease-in-out;
 }
+
+.bayan-section-label__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 25px;
+    height: 25px;
+}
+
+.bayan-section-label__icon::before,
+.bayan-section-label__icon::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: var(--color-5);
+    position: absolute;
+    left: 50%;
+    transition: background-color .2s ease-in-out, transform .5s ease-in-out, opacity .5s ease-in-out;
+    opacity: 0;
+}
+
+.bayan-section-label__icon::before {
+    transform: translate(-50%, -50%);
+}
+
+.bayan-section-label__icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.bayan-section-label__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease-in-out;
+}
+
+.bayan-section-label__picture {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: ease-in-out .5s;
+    position: absolute;
+    background-color: var(--color-1);
+}
+
+.bayan-section-label__picture--front {
+    transform: rotateY(-180deg);
+}
+
+.bayan-section-label__picture--back {
+    transform: rotateY(0);
+}
+
+.bayan-section-label__mem {
+    margin: 15px;
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.bayan-sections:hover .bayan-section-label__caption {
+    color: var(--color-6);
+}
+
+.bayan-sections:hover .bayan-section-label__icon::before,
+.bayan-sections:hover .bayan-section-label__icon::after {
+    opacity: 1;
+    background-color: var(--color-6);
+}
+
+.bayan-section:hover .bayan-section-label__content {
+    max-height: 100vh;
+}
+
+.bayan-section__input:checked + .bayan-section-label .bayan-section-label__content {
+    max-height: 100vh;
+}
+
+.bayan-section__input:checked + .bayan-section-label .bayan-section-label__icon::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.bayan-section__input:checked + .bayan-section-label .bayan-section-label__icon::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.bayan-section__input:checked + .bayan-section-label .bayan-section-label__caption {
+    color: var(--color-6);
+}
+
+.bayan-section:hover .bayan-section-label__picture--front {
+    transform: rotateY(0);
+}
+
+.bayan-section:hover .bayan-section-label__picture--back {
+    transform: rotateY(180deg);
+}
+
+.bayan-section__input:checked + .bayan-section-label .bayan-section-label__picture--front {
+    transform: rotateY(0);
+}
+
+.bayan-section__input:checked + .bayan-section-label .bayan-section-label__picture--back {
+    transform: rotateY(180deg);
+}
