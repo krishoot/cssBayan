@@ -13,22 +13,14 @@
         color: var(--color-6);
     }
 
-    .bayan-sections:hover .bayan-section-label__icon::before,
-    .bayan-sections:hover .bayan-section-label__icon::after {
+    .bayan-sections:hover .bayan-section-label__icon {
         opacity: 1;
-        background-color: var(--color-6);
+        color: var(--color-6);
+        transform: rotate(0deg);
     }
 
     .bayan-section:hover .bayan-section-label__content {
         max-height: 100vh;
-    }
-
-    .bayan-section:hover .bayan-section-label__icon::before {
-        transform: translate(-50%, -50%) rotate(-45deg);
-    }
-
-    .bayan-section:hover .bayan-section-label__icon::after {
-        transform: translate(-50%, -50%) rotate(45deg);
     }
 }
 
@@ -38,20 +30,20 @@
 
 @media screen and (max-width: 820px) {
     .page {
-        padding: 15px;
+        padding: 0.9375em;
     }
 
     .bayan__title {
-        font-size: 18px;
+        font-size: 1.125em;
     }
 
     .bayan-section-label__caption {
-        font-size: 16px;
+        font-size: 1em;
     }
 
     .bayan-section-label__icon {
-        width: 18px;
-        height: 18px;
+        width: 1.125em;
+        height: 1.125em;
     }
 }
 
@@ -61,22 +53,22 @@
 
 @media screen and (max-width: 400px) {
     .bayan-section-label__mem {
-        width: 250px;
-        height: 250px;
+        width: 15.625em;
+        height: 15.625em;
     }
 }
 
 @media screen and (max-width: 320px) {
     .bayan__title {
-        font-size: 16px;
+        font-size: 1em;
     }
 
     .bayan-section-label__caption {
-        font-size: 14px;
+        font-size: 0.875em;
     }
     .bayan-section-label__icon {
-        width: 16px;
-        height: 16px;
+        width: 1em;
+        height: 1em;
     }
 }
 
