@@ -16,7 +16,6 @@
     .bayan-sections:hover .bayan-section-label__icon {
         opacity: 1;
         color: var(--color-6);
-        transform: rotate(0deg);
     }
 
     .bayan-section:hover .bayan-section-label__content {
